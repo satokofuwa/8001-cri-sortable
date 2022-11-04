@@ -1,0 +1,32 @@
+$breakpoints:(
+  'sm':340,
+  'md':480,
+  'lg':980,
+) !default;
+
+@mixin mq($mq, $bp1:lg, $bp2:lg){ /* mqには最小最大などの文字列が入る*/
+  $w1  : map-get($breakpoints, $bp1);
+  $w2  : map-get($breakpoints, $bp2);
+  $min1 : 'min-width: #{(w1+1)px}';
+  $max1 : 'min-width: #{(w1)px}';
+  $min1 : 'min-width: #{(w1+1)px}';
+  $max2 : 'min-width: #{(w2)px}';
+
+@if $mq == min {
+  @media screen and ($min1){
+    @content;
+  }
+}
+@else if $mq == max{
+  @media screen and ($max1){
+    @content;
+  }
+}
+@else if $mq == min-max{
+  @media screen and ($min2) and ($max2){
+    @content;
+  }
+}
+}
+
+$mainColor: #7BC2BA;
