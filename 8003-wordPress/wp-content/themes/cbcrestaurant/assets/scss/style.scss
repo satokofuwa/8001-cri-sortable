@@ -436,12 +436,37 @@ dl{
   .main{
     padding:10px;
     font:normal 1.2em/2 sans-serif;
-    h1{
-      margin-bottom:20px;
-      color:#666;
-      font:bold 2em/2 sans-serif;
-    }
+     /* 以下を追加 */
+  @include v.mq('min','lg'){
+    margin-right:50px;
   }
+  time{
+    font:normal 1.1em/2 serif;
+  }
+  .category{
+    display:inline-block;
+    padding:0px 20px;
+    border: 1px solid #ccc;
+  }
+  .content{
+    margin:20px 0;
+  }
+  /* ここまで追加 */
+
+  h1{
+    margin-bottom:20px;
+    color:#666;
+    font:bold 2em/2 sans-serif;
+    /* 以下を追加 */
+    a{
+      color:#666;
+      @include v.mq('max','lg'){
+        font-size:0.7em;
+      }
+    }
+    /* ここまで追加 */
+  }
+}
 }
 /*******************
 * slick
