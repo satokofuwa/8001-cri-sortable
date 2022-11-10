@@ -15,3 +15,22 @@ function add_css_js() {
   wp_enqueue_script('main', get_template_directory_uri().'./assets/js/main.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'add_css_js');
+
+function first_image() {
+  global $post;  /* $postは投稿記事のオブジェクトデータ */
+  $first_img = '';
+
+  preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches[1][0];
+
+  if(empty($first_img)){
+    $first_img = "/assets/img/default.jpg";
+  }
+  return $first_img;
+}
+
+/* ② */
+function instagram_template_part() {
+  get_template_part('instagram');
+}
+add_shortcode('top_instagram', 'instagram_template_part');

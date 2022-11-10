@@ -270,64 +270,67 @@ img{
   background: #242424;
 }
 
-.Instagram{
+.instagram{
  background: white;
  padding: 100px;
 }
 @media screen and (max-width:480px){
-  .Instagram {
+  .instagram {
     width: 100%;
     padding: 50px 0;
   }
 }
-.Instagram__contents-title{
+.instagram__title{
 margin: 0 auto;
 width: 90%;
 font-size: 24px;
 }
 @media screen and (max-width:480px){
-  .Instagram__contents-title{
+  .instagram__title{
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 16px;
   }
 }
-.Instagram__list {
+.instagram__list {
   width: 90%;
   display: flex;
   margin: 0 auto;
   margin-top:40px;
-
+}
+.instagram__list-img p{  
+  padding-top:5px;
+  font:normal 0.7em/1.3em sans-serif;
 }
 @media screen and (max-width:480px){
-  .Instagram__list{
+  .instagram__list{
     flex-wrap: wrap;
   }
 }
-.Instagram__list li {
+.instagram__list li {
   width: calc(100% / 4 - 15px );
 }
 @media screen and (max-width:480px){
-  .Instagram__list li{
+  .instagram__list li{
     width: calc(100% / 2 - 2%);
   }
 }
-.Instagram__list li:not(:last-child) {
+.instagram__list li:not(:last-child) {
   margin-right: 30px;
 }
 @media screen and (max-width:480px){
-  .Instagram__list li:not(:last-child) {
+  .instagram__list li:not(:last-child) {
     margin-right: 0;
   }
-  .Instagram__list li:nth-child(odd) {
+  .instagram__list li:nth-child(odd) {
     margin-right: 4%;
   }
-  .Instagram__list li:nth-child(n+3) {
+  .instagram__list li:nth-child(n+3) {
     margin-top: 24px;
   }
 }
-.Instagram__button{
+.instagram__button{
   border: 1px solid #242424;
   width:180px;
   margin: 60px auto 0;
@@ -338,13 +341,13 @@ font-size: 24px;
     width: 90%;
   }
 }
-.Instagram__button a{
+.instagram__button a{
  text-align:center;
  padding: 16px 0;
  font-size:14px;
  color:#242424;
 }
-.Instagram__button a:hover {
+.instagram__button a:hover {
   color: #fff;
   background: #242424;
 }
